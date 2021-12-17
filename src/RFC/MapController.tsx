@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { IMapPin } from './types/legacy'
-import { getNewState, IMapControllerState} from './lib/getNewState'
+import { IMapPin, IMapControllerState } from './types'
+import { getNewState } from './lib/getNewState'
 
 interface IMapControllerProps {
   children: React.ReactNode

@@ -1,10 +1,5 @@
-import { IMapPin } from 'src/models'
-import { getFilters, IMapFilter } from './getFilters'
-export interface IMapControllerState {
-  mapPins: IMapPin[]
-  filteredPins: IMapPin[]
-  filters: IMapFilter[]
-}
+import { IMapPin, IMapFilter, IMapControllerState } from '../types'
+import { getFilters } from './getFilters'
 
 type IAction = 
 | { type: "SET_DATA", payload: IMapPin[] }
@@ -19,7 +14,7 @@ export const getNewState = (actualState: IMapControllerState, action: IAction): 
   switch (action.type) {
     case "SET_DATA":
       const dataFilters = getFilters(action.payload)
-      const userFilters = [] // @wip
+      const userFilters:IMapFilter[] = [] // @wip
       const filteredPins = getFilteredPins(action.payload, userFilters)
       newState = {...actualState, mapPins: action.payload, filteredPins, filters:dataFilters }     
       break;

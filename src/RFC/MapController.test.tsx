@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
-import { IMapPin } from './types/legacy'
-import { getMapsGroups, IMapFilter } from './lib/getFilters'
+import { IMapPin, IMapFilter } from './types'
+import { getMapsGroups } from './lib/getFilters'
 import { getTestsPins } from './lib/testHelpers'
 
 import MapController from './MapController'
@@ -9,6 +9,7 @@ interface IMockMapViewProps {
   filteredPins?: IMapPin[]  
   filters?: IMapFilter[]
 }
+
 const MockMapView = ({filteredPins = [], filters= []}:IMockMapViewProps) => {
   return (
     <div>
@@ -21,11 +22,15 @@ const MockMapView = ({filteredPins = [], filters= []}:IMockMapViewProps) => {
   )
 }
 
+interface ISUTProps {
+  mapPins: IMapPin[]
+}
+
 describe('MapController', () => {
-  let ComponentUnderTest;
+  let ComponentUnderTest: any;
 
   beforeEach(() => {
-    ComponentUnderTest = ({mapPins, filters}) => (
+    ComponentUnderTest = ({mapPins}: ISUTProps) => (
       <MapController mapPins={mapPins} >
         <MockMapView />
       </MapController>

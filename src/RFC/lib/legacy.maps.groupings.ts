@@ -1,4 +1,4 @@
-import { IMapGrouping } from '../types/legacy'
+import { IMapGrouping } from '../types'
 // import Workspace from 'src/pages/User/workspace/Workspace'
 
 // grouping used (icons will be generated from type in method below)

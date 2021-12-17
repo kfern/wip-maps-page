@@ -1,4 +1,4 @@
-import { IMapPin } from '../types/legacy'
+import { IMapPin } from '../types'
 
 export const getTestsPins = () : IMapPin[] => {
   const testsData: IMapPin[] = [

@@ -1,6 +1,6 @@
-import { IMapPin } from '../types/legacy'
+import { IMapPin, IMapFilter } from '../types'
 
-import { getFilters, IMapFilter } from './getFilters'
+import { getFilters } from './getFilters'
 
 describe('getFilters', () => {
   it('should return an empty array when data is empty', async () => {

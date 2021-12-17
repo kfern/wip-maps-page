@@ -1,11 +1,12 @@
 import { getTestsPins } from './testHelpers'
-import { getNewState, IMapControllerState } from './getNewState'
+import { IMapPin, IMapControllerState } from '../types'
+import { getNewState } from './getNewState'
 import { getMapsGroups } from './getFilters'
 
 describe('getNewState', () => {
   it('SET_DATA with empty data', async () => {    
     // Arrange
-    const testsData = []
+    const testsData:IMapPin[] = []
     const beforeState:IMapControllerState = {
       mapPins: [],
       filteredPins: [],
