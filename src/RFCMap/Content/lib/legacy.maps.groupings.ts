@@ -1,8 +1,8 @@
-import { IMapGrouping } from '../types'
+import { IMapGrouping } from '../../types'
 // import Workspace from 'src/pages/User/workspace/Workspace'
 
 // grouping used (icons will be generated from type in method below)
-const GROUPINGS: IMapGrouping[] = [
+export const GROUPINGS: IMapGrouping[] = [
   {
     grouping: 'place',
     displayName: 'Extrusion',
@@ -66,8 +66,10 @@ const GROUPINGS: IMapGrouping[] = [
   },
 ]
 
+/*
 // merge groupings with icons above for export
 export const MAP_GROUPINGS = GROUPINGS.map(g => ({
   ...g,
   icon: '@todo' // Workspace.findWorkspaceBadge(g.type, true),
 }))
+*/
