@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { IMapControlsProps, IMapFilter } from '../../../types'
 
-import Checkbox from '../filterOne/Checkbox';
+import Checkbox from '../filterOne/Checkbox'
 
 const sortByGrouping = (a: IMapFilter, b: IMapFilter): number => {
   if (a.grouping === b.grouping) {
